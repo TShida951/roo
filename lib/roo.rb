@@ -11,6 +11,7 @@ module Roo
   autoload :LibreOffice,  'roo/libre_office'
   autoload :Excelx,       'roo/excelx'
   autoload :CSV,          'roo/csv'
+  autoload :Docx,          'roo/docx'
 
   TEMP_PREFIX = 'roo_'
 
@@ -18,7 +19,8 @@ module Roo
     ods: Roo::OpenOffice,
     xlsx: Roo::Excelx,
     xlsm: Roo::Excelx,
-    csv: Roo::CSV
+    csv: Roo::CSV,
+    doc: Roo::Docx
   }
 
   def self.const_missing(const_name)
